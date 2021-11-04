@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t beto/docker-react -f Dockerfile .
+  - docker build -t beto/docker-react -f Dockerfile.dev .
 scripts:
   - docker run beto/docker-react npm run test -- --coverage
 deploy:
